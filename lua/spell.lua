@@ -97,7 +97,6 @@ local spell_suggest = function()
     local ns_id = vim.api.nvim_create_namespace('spell_suggest')
     local buf = vim.api.nvim_create_buf(false, true)
     vim.api.nvim_buf_set_lines(buf, 0, -1, true, lines)
-    print(buf)
     vim.bo[buf].filetype = 'Spell'
     vim.bo[buf].bufhidden = 'wipe'
     for _, range in ipairs(ranges) do
